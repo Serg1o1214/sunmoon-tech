@@ -571,10 +571,12 @@
 
             .hero h1 {
                 font-size: 2rem;
+                padding: 0 1rem;
             }
 
             .hero p {
                 font-size: 1rem;
+                padding: 0 1rem;
             }
 
             .section {
@@ -589,6 +591,7 @@
             .service-card {
                 min-height: 180px;
                 padding: 1.5rem;
+                margin: 0.5rem;
             }
 
             .service-card h3 {
@@ -615,15 +618,30 @@
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+                padding: 0 1rem;
             }
 
             .footer-section {
                 text-align: center;
                 align-items: center;
+                margin-bottom: 2rem;
             }
 
             .social-links {
                 justify-content: center;
+            }
+
+            .service-detail {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .service-content ul {
+                padding-left: 0;
+            }
+
+            .service-content li {
+                padding-left: 1.2rem;
             }
         }
 
@@ -647,6 +665,26 @@
 
             .logo img {
                 height: 40px;
+            }
+
+            .footer {
+                padding: 2rem 1rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .footer-section p {
+                font-size: 0.85rem;
+            }
+
+            .qr-content {
+                padding: 15px;
+            }
+
+            .qr-content img {
+                max-width: 180px;
             }
         }
 
@@ -723,16 +761,6 @@
             <button class="mobile-menu-btn">☰</button>
         </nav>
     </header>
-
-    <div class="mobile-menu">
-        <button class="close-btn">×</button>
-        <div class="nav-links">
-            <a href="#home">首页</a>
-            <a href="#services">服务</a>
-            <a href="#about">关于我们</a>
-            <a href="#contact">联系我们</a>
-        </div>
-    </div>
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -912,6 +940,16 @@
             <h3>扫码关注我们</h3>
             <img src="images/微信二维码.jpg" alt="微信二维码">
             <p>微信：sunyuekeji</p>
+        </div>
+    </div>
+
+    <div class="mobile-menu">
+        <button class="close-btn">×</button>
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#services">服务</a>
+            <a href="#about">关于我们</a>
+            <a href="#contact">联系我们</a>
         </div>
     </div>
 
