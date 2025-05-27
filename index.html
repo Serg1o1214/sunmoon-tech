@@ -120,11 +120,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(26, 35, 126, 0.95);
+            background: rgba(26, 35, 126, 0.98);
             z-index: 1001;
             padding: 2rem;
             transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(8px);
         }
 
         .mobile-menu.active {
@@ -133,13 +134,25 @@
 
         .mobile-menu .close-btn {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
+            top: 1.5rem;
+            right: 1.5rem;
             background: none;
             border: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 2rem;
             cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu .close-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(90deg);
         }
 
         .mobile-menu .nav-links {
@@ -147,11 +160,40 @@
             align-items: center;
             justify-content: center;
             height: 100%;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .mobile-menu .nav-links a {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            padding: 1rem 2rem;
+            width: 100%;
+            text-align: center;
+            border-radius: 8px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mobile-menu .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(0);
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        .mobile-menu .nav-links a:hover::before {
+            transform: scale(1);
+        }
+
+        .mobile-menu .nav-links a:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.05);
         }
 
         .hero {
