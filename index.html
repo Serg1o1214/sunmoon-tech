@@ -126,10 +126,12 @@
             transform: translateX(-100%);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             backdrop-filter: blur(8px);
+            overflow-y: auto;
         }
 
         .mobile-menu.active {
             transform: translateX(0);
+            display: block;
         }
 
         .mobile-menu .close-btn {
@@ -148,6 +150,7 @@
             justify-content: center;
             border-radius: 50%;
             transition: all 0.3s;
+            z-index: 1002;
         }
 
         .mobile-menu .close-btn:hover {
@@ -161,6 +164,7 @@
             justify-content: center;
             height: 100%;
             gap: 2.5rem;
+            padding-top: 4rem;
         }
 
         .mobile-menu .nav-links a {
@@ -172,6 +176,9 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            color: white;
+            text-decoration: none;
+            display: block;
         }
 
         .mobile-menu .nav-links a::before {
@@ -904,6 +911,23 @@
                     <li>智能场景应用开发</li>
                 </ul>
                 <p>帮助企业实现设备智能化，提升运营效率。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 class="section-title">联系我们</h2>
+        <div class="service-detail">
+            <div class="service-content">
+                <h3>期待与您合作</h3>
+                <p>无论您有任何问题或需求，我们都随时为您服务</p>
+                <ul>
+                    <li>电话：+86 137 3226 7153</li>
+                    <li>邮箱：1773672778@qq.com</li>
+                    <li>地址：中国杭州市临平区科技园区</li>
+                </ul>
+                <p>您也可以扫描下方二维码，通过微信与我们联系</p>
+                <button class="cta-button" onclick="showQRCode()">查看微信二维码</button>
             </div>
         </div>
     </section>
